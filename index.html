@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b3027">
+<title>2.5 FAMILY | One Bond. Five Values.</title>
+<style>
+:root{--g:#0b3027;--g2:#145b45;--gold:#f4c65e;--cream:#f7f6ef;--ink:#152820;--muted:#65756c;--line:#e2e9e2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,sans-serif;line-height:1.65}
+.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:var(--g);color:white}
+.navbar{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:white;font-weight:900}
+.brand small{display:block;font-size:10px;letter-spacing:2px;color:#d7e8df}
+.logo{width:48px;height:48px;flex:none}
+nav{display:flex;align-items:center;gap:22px}
+nav a{color:white;text-decoration:none;font-size:13px;font-weight:bold}
+nav a:hover{color:var(--gold)}
+.navcta{background:var(--gold);color:var(--g);padding:10px 14px;border-radius:30px}
+.menu{display:none;background:none;border:1px solid #ffffff70;color:white;padding:8px 12px;border-radius:8px}
+.hero{background:radial-gradient(circle at 80% 20%,#1a7052,transparent 30%),linear-gradient(125deg,#08271f,#0d4937 65%,#13563f);color:white;overflow:hidden}
+.hero-grid{min-height:520px;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center;padding:65px 0}
+.kicker{color:var(--gold);font-weight:bold;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-2px;margin:18px 0}
+h1 span{color:var(--gold)}
+.lead{max-width:600px;color:#e0eee6;font-size:17px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{display:inline-block;text-decoration:none;border:0;border-radius:11px;padding:13px 18px;font-weight:800;font-size:14px;cursor:pointer}
+.gold{background:var(--gold);color:#173529}
+.outline{border:1px solid #ffffff80;color:white;background:transparent}
+.orbit{width:min(310px,80vw);aspect-ratio:1;margin:auto;border:1px solid #f4c65e88;border-radius:50%;display:grid;place-items:center;position:relative;box-shadow:0 0 0 18px #ffffff05,0 0 0 38px #ffffff03}
+.orbit:before,.orbit:after{content:"";position:absolute;inset:20px;border:1px solid #f4c65e50;border-radius:50%}
+.orbit:after{inset:40px}
+.orbtext{text-align:center;z-index:1}
+.orbtext strong{display:block;font-size:90px;line-height:1;color:var(--gold);letter-spacing:-7px}
+.orbtext b{letter-spacing:6px}
+.orbtext small{display:block;font-size:10px;letter-spacing:2px;color:#d9e8df;margin-top:9px}
+section{padding:75px 0}
+.head{text-align:center;max-width:720px;margin:0 auto 35px}
+.head .kicker{color:var(--g2)}
+h2{font-size:clamp(30px,4vw,44px);line-height:1.12;letter-spacing:-1px;color:var(--g);margin:12px 0}
+.head p,.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;padding:25px;border:1px solid var(--line);border-radius:20px}
+.icon{width:50px;height:50px;display:grid;place-items:center;background:#eaf3ed;border-radius:14px;font-size:24px;margin-bottom:14px}
+.card h3{color:var(--g);margin:0 0 8px}
+.card p{color:var(--muted);font-size:14px;margin:0}
+.meaning{background:#eaf0e9}
+.meaning-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:center}
+.meaning-art{background:var(--g);color:white;text-align:center;border-radius:25px;padding:35px}
+.meaning-art strong{font-size:85px;color:var(--gold);letter-spacing:-6px;line-height:1}
+.meaning-art h3{letter-spacing:5px;margin:0}
+.meaning-art p{color:#dce9e2}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pillar{display:flex;gap:11px;align-items:center;background:white;padding:14px;border-radius:13px;border:1px solid var(--line)}
+.num{width:35px;height:35px;flex:none;display:grid;place-items:center;background:var(--gold);border-radius:10px;font-weight:bold;color:var(--g)}
+.pillar b{display:block;color:var(--g);font-size:14px}
+.pillar small{display:block;color:var(--muted);font-size:12px}
+.join{background:white}
+.join-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:25px;align-items:start}
+.note{background:linear-gradient(150deg,var(--g),#176348);color:white;padding:28px;border-radius:20px}
+.note h2{color:white;font-size:30px}
+.note p,.note li{color:#dce9e2}
+.formcard{padding:28px;border:1px solid var(--line);border-radius:20px;box-shadow:0 12px 35px #153d2d0c}
+.formcard h3{color:var(--g);font-size:24px;margin:0}
+.formcard>p{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:flex;flex-direction:column;gap:6px}
+.full{grid-column:1/-1}
+label{font-size:13px;font-weight:bold}
+input,textarea{width:100%;border:1px solid #d6e0d7;background:#fcfdfb;border-radius:9px;padding:12px;font:inherit}
+textarea{min-height:100px}
+input:focus,textarea:focus{outline:2px solid #20745655}
+.submit{width:100%;background:#16834f;color:white;margin-top:12px}
+.contact{background:var(--g);text-align:center;color:white}
+.contact h2{color:white}
+.contact p{color:#d6e6dd}
+.contact .actions{justify-content:center}
+footer{background:#062019;color:#c5d9ce;text-align:center;padding:22px;font-size:12px}
+footer strong{color:var(--gold)}
+.float{position:fixed;right:16px;bottom:16px;z-index:8;background:#20bd62;color:white;text-decoration:none;font-weight:bold;padding:12px 16px;border-radius:30px;box-shadow:0 6px 20px #0003}
+@media(max-width:780px){
+.menu{display:block}
+nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--g);padding:20px;flex-direction:column;align-items:stretch}
+nav.open{display:flex}
+.hero-grid,.meaning-grid,.join-grid{grid-template-columns:1fr}
+.hero-grid{text-align:center;padding:45px 0}
+.hero-grid .actions{justify-content:center}
+.orbit{width:230px;grid-row:1}
+.orbtext strong{font-size:70px}
+.cards{grid-template-columns:1fr}
+.note{position:static}
+section{padding:58px 0}
+}
+@media(max-width:500px){
+.pillars,.grid{grid-template-columns:1fr}
+.full{grid-column:auto}
+.formcard{padding:20px}
+h1{letter-spacing:-1px}
+}
+</style>
+</
